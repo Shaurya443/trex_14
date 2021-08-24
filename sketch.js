@@ -83,7 +83,7 @@ function draw() {
   
   //console.log("this is ",gameState)
   camera.position.x=trex.x
-  camera.position.y= trex.y
+ camera.position.y= trex.y
   if(gameState === PLAY){
     gameOver.visible = false
     restart.visible = false
@@ -119,9 +119,17 @@ function draw() {
     //  trex.velocityY = -12
      // jumpSound.play();
     }
-    if(score % 100 ===0 && score > 0){
-      checkPointSound.play();
-    }
+   
+  }
+  if(score === 234 ){
+    gameState = END
+    trex.changeAnimation("collided", trex_collided);
+    ground.velocityX = 0;
+     trex.velocityY = 0
+   obstaclesGroup.setVelocityXEach(0);
+     cloudsGroup.setVelocityXEach(0);
+     gameOver.visible = true;
+     restart.visible = true;
   }
    else if (gameState === END) {
     // console.log("hey")
