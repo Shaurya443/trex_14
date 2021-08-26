@@ -79,7 +79,7 @@ function draw() {
   
   background(180);
   //displaying score
-  text("Score: "+ score, 500,50);
+  text("Score: "+ score, 10,100);
   
   //console.log("this is ",gameState)
   camera.position.x=trex.x
@@ -121,7 +121,7 @@ function draw() {
     }
    
   }
-  if(score === 234 ){
+  if(score === 1000){
     gameState = END
     trex.changeAnimation("collided", trex_collided);
     ground.velocityX = 0;
