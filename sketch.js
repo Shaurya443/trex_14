@@ -53,7 +53,7 @@ function setup() {
    gameOver = createSprite(300,100);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(300,140);
+  restart = createSprite(20,140);
   restart.addImage(restartImg);
   
   gameOver.scale = 0.5;
@@ -88,7 +88,7 @@ function draw() {
     gameOver.visible = false
     restart.visible = false
     //move the ground
-    ground.velocityX = -(4+ 3 * score/100);
+    ground.velocityX = -(4+ 3 * score/1000);
     //scoring
     score = score + Math.round(frameCount/60);
     
@@ -121,7 +121,7 @@ function draw() {
     }
    
   }
-  if(score === 1000){
+  if(score === 157){
     gameState = END
     trex.changeAnimation("collided", trex_collided);
     ground.velocityX = 0;
