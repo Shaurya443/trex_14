@@ -69,7 +69,7 @@ function setup() {
   console.log("Hello" + 5);
   
   trex.setCollider("circle",0,0,40);
-   trex.debug = true
+   trex.debug = false
   
   score = 0;
   
@@ -88,7 +88,7 @@ function draw() {
     gameOver.visible = false
     restart.visible = false
     //move the ground
-    ground.velocityX = -(4+ 3 * score/1000);
+    ground.velocityX = -(4+ 3 * score/100);
     //scoring
     score = score + Math.round(frameCount/60);
     
